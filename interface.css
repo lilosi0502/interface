@@ -86,10 +86,11 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex: 1;
   text-align: center;
+  padding-top: 200px;
 }
 .container .center h1 {
   font-size: 80px;
@@ -104,4 +105,34 @@ body {
   color: white;
   margin-top: 10px;
   letter-spacing: 2px;
+}
+.container .center .email {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.0588235294);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  font-family: "urbanist", sans-serif;
+  padding: 5px;
+  color: white;
+  font-size: 25px;
+  margin: 100px 10px;
+}
+.container .center .submit {
+  border: 1px solid white;
+  border-radius: 5px;
+  font-family: "urbanist", sans-serif;
+  background-color: #ffffff;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+.container .center .submit:hover {
+  background-color: #374f61;
+  color: #ffffff;
+  cursor: pointer;
 }/*# sourceMappingURL=interface.css.map */
