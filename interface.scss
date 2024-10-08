@@ -26,6 +26,9 @@ body{
     padding-right: 100px;
 
     .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         position: absolute;
         grid-column: span 13;
         padding: 20px;
@@ -35,25 +38,38 @@ body{
         left: 0;
         width: 1880px;
     }
+    .logo{
+        margin-left: 10px;
+    }
     .login{
+        font-family: 'urbanist', sans-serif;
         display: table;
-        background-color: aliceblue;
-        border-radius: 20px;
-        text-align: right;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding: 10px 20px;
     }
     .header-mid{
-        display: flex;
-        background-color: #50bbd8;
+        background-color: #ffffff31;
+        border: 1px solid white;
         border-radius: 20px;
-        width: 350px;
+        padding: 5px 20px;
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        margin: 0 650px;
     }
     .item{
+        font-family: 'urbanist', sans-serif;
+        display: inline-block;
+        transition: background-color 0.3s, color 0.3s;
         color: rgb(255, 255, 255);
         text-align: center;
         padding: 12px;
         font-size: 18px;
         line-height: 25px;
         border-radius: 4px;
+        
+        
     }
     .center{
         grid-column: span 13;
@@ -73,7 +89,7 @@ body{
         }
 
         p{
-            font-size: 2s4px;
+            font-size: 24px;
             font-family: 'urbanist', sans-serif;
             color: white;
             margin-top: 10px;
