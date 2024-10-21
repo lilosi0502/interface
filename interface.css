@@ -3,10 +3,20 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #555565;
-  opacity: 1;
-  background-image: radial-gradient(circle at center center, #50bbd8, #555565), repeating-radial-gradient(circle at center center, #50bbd8, #50bbd8, 26px, transparent 52px, transparent 26px);
-  background-blend-mode: multiply;
+  overflow: hidden;
+}
+html ::-webkit-scrollbar, body ::-webkit-scrollbar {
+  width: 15px;
+}
+html ::-webkit-scrollbar-track, body ::-webkit-scrollbar-track {
+  background: #101620;
+}
+html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
+  background: #3d5161;
+  border-radius: 10px;
+}
+html ::-webkit-scrollbar-thumb:hover, body ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4509803922);
 }
 
 @font-face {
@@ -17,22 +27,26 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: hidden;
 }
 
 .container {
   width: 100%;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 1;
+  overflow-x: hidden;
+  height: 100vh;
+}
+.container .landingBG {
+  background-color: #b4d0ff;
+  background-image: radial-gradient(circle at center center, #50bbd8, #555565), repeating-radial-gradient(circle at center center, #50bbd8, #50bbd8, 26px, transparent 52px, transparent 26px), linear-gradient(180deg, rgba(0, 0, 0, 0), #000000 90%);
+  background-blend-mode: multiply;
+  height: 100vh;
 }
 .container .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  grid-column: span 13;
   padding: 20px;
   margin: 0;
   -webkit-backdrop-filter: blur(15px);
@@ -44,12 +58,12 @@ body {
 }
 .container .login {
   font-family: "urbanist", sans-serif;
-  display: table;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  margin-right: 10px;
   padding: 10px 20px;
-  display: inline-block;
   transition: background-color 0.3s, color 0.3s;
+  color: black;
 }
 .container .login:hover {
   background-color: #374f61;
@@ -66,7 +80,7 @@ body {
   flex: 1;
   margin: 0 650px;
 }
-.container .item {
+.container a {
   font-family: "urbanist", sans-serif;
   display: inline-block;
   transition: background-color 0.3s, color 0.3s;
@@ -77,7 +91,7 @@ body {
   line-height: 25px;
   border-radius: 4px;
 }
-.container .item:hover {
+.container a:hover {
   background-color: rgba(255, 255, 255, 0.1921568627);
   color: #ffffff;
   cursor: pointer;
@@ -98,6 +112,7 @@ body {
   color: white;
   margin: 0;
   letter-spacing: 0.5px;
+  font-weight: 600;
 }
 .container .center p {
   font-size: 24px;
@@ -105,6 +120,7 @@ body {
   color: white;
   margin-top: 10px;
   letter-spacing: 2px;
+  font-weight: 300;
 }
 .container .center .email {
   border: 1px solid white;
@@ -135,4 +151,67 @@ body {
   background-color: #374f61;
   color: #ffffff;
   cursor: pointer;
+}
+.container .meetbolt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  padding-top: 50px;
+  background-color: #000000;
+}
+.container .meetbolt .textMB {
+  background-color: #070707;
+  border: 1px solid rgba(255, 255, 255, 0.1411764706);
+  border-radius: 10px;
+  margin: 0 0 20px 0;
+  padding: 50px 0 50px 0;
+}
+.container .meetbolt .textMB h2 {
+  background-color: #0e0e0e;
+  border: 2px solid rgba(255, 255, 255, 0.1411764706);
+  font-weight: 200;
+  padding: 10px;
+  font-family: "urbanist", sans-serif;
+  color: #ffffff;
+  border-radius: 50px;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+.container .meetbolt .textMB p {
+  font-family: "urbanist", sans-serif;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  font-size: 29px;
+  font-weight: 100;
+}
+.container .ourWork {
+  background-color: #000000;
+  overflow: auto;
+}
+.container .ourWork .textOW {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.container .ourWork .textOW .ourWorkItem {
+  font-family: "urbanist", sans-serif;
+  color: white;
+  background-color: #070707;
+  border: 1px solid rgba(255, 255, 255, 0.1411764706);
+  border-radius: 10px;
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+}
+.container .ourWork .textOW .logoOW {
+  display: block;
+  margin: 10px;
+  height: 50%;
+  width: 50%;
 }/*# sourceMappingURL=interface.css.map */
